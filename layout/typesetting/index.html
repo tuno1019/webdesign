@@ -1,0 +1,382 @@
+<!doctype html>
+
+<html lang="us">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>webfont</title>
+
+	<link href="css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+
+	<script src="js/jquery-1.10.2.js"></script>
+
+	<script src="js/jquery-ui-1.10.4.custom.js"></script>
+
+	<script>
+
+	$(function() {
+
+		
+
+		$( "#accordion" ).accordion();
+
+		
+
+		// Hover states on the static widgets
+
+		$( "#dialog-link, #icons li" ).hover(
+
+			function() {
+
+				$( this ).addClass( "ui-state-hover" );
+
+			},
+
+			function() {
+
+				$( this ).removeClass( "ui-state-hover" );
+
+			}
+
+		);
+
+	});
+
+	</script>
+
+	<style>
+
+	body{
+
+		font-size:100%;
+
+		font-family: Verdana, Geneva, sans-serif, "微軟正黑體";
+
+		margin: 50px;
+
+		-webkit-text-size-adjust:none;	
+
+	}
+
+	.demoHeaders {
+
+		margin-top: 2em;
+
+	}
+
+	#dialog-link {
+
+		padding: .4em 1em .4em 20px;
+
+		text-decoration: none;
+
+		position: relative;
+
+	}
+
+	#dialog-link span.ui-icon {
+
+		margin: 0 5px 0 0;
+
+		position: absolute;
+
+		left: .2em;
+
+		top: 50%;
+
+		margin-top: -8px;
+
+	}
+
+	#icons {
+
+		margin: 0;
+
+		padding: 0;
+
+	}
+
+	#icons li {
+
+		margin: 2px;
+
+		position: relative;
+
+		padding: 4px 0;
+
+		cursor: pointer;
+
+		float: left;
+
+		list-style: none;
+
+	}
+
+	#icons span.ui-icon {
+
+		float: left;
+
+		margin: 0 4px;
+
+	}
+
+	.fakewindowcontain .ui-widget-overlay {
+
+		position: absolute;
+
+	}
+
+	td{padding:5px; line-height:22px;}
+
+	
+
+	</style>
+
+</head>
+
+<body>
+
+<div id="accordion">
+
+  <h3>網頁字型大小</h3>
+
+	<div>
+
+    <p style="line-height:28px;">
+
+    <strong>pt - </strong>一般印列用字體尺寸<br>
+
+	<strong>px - </strong>像素單位(pixel)<br>
+
+    <strong>em - </strong>瀏覽器預設尺寸，通常是 16px。em可利用階層的概念進行設定，如第一層標題設定為標準的兩倍，即2em，<br>子層設定為標準的一半，設定為 0.5em。但因為此階層概念會向下影響，即在此例中，內文的實際尺寸為2 x 0.5 = 1em<br>
+
+	<strong>rem - </strong>瀏覽器預設尺寸，通常是 16px。網站的文字大小是 16px，rem的尺寸就是以 16px 為基準，故下方的 1rem 會與 16px 相同尺寸。所以無論外層是否有其他文字大小，皆不會影響 rem 的尺寸。<br>
+
+    <strong>percent(%) - </strong>同em的概念，只是在使用上寫法不同，如第一層標題設定為200%，其子層設定為50%，<br> 與em相同階層會向下影響，則子階層的實際尺寸為(200%*50% = 100%)
+
+    </p>
+
+    
+
+    <p style="font-weight:bold">1em = 16px 12pt = 100%</p>
+
+    <p>font-family: Verdana, 微軟正黑體</p>
+
+    <table border="1" cellpadding="0" cellspacing="0" width="550" bordercolor="#CCCCCC">
+
+	<tr>
+    	<td width="271" align="right">
+        螢幕預設 1em = 100%
+        </td>
+        <td width="273"><span style="font-size:1em">測試文字 testtext</span></td>
+    </tr>
+
+	<tr>
+	  <td align="right">16px </td>
+	  <td><span style="font-size:16px"> 測試文字 testtext</span></td>
+  	</tr>
+
+	<tr>
+	  <td align="right">12pt </td>
+	  <td><span style="font-size:12pt"> 測試文字 testtext</span></td>
+  	</tr>
+
+	</table>
+
+	<br>
+
+	<table border="1" cellpadding="0" cellspacing="0" width="550" bordercolor="#CCCCCC">
+
+	<tr>
+    	<td width="271" align="right">
+        螢幕預設 1rem = 100%
+        </td>
+        <td width="273"><span style="font-size:1rem">測試文字 testtext</span></td>
+    </tr>
+
+	<tr>
+	  <td align="right">16pt </td>
+	  <td><span style="font-size:1rem"> 測試文字 testtext</span></td>
+  	</tr>
+	
+	<tr>
+	  <td align="right">1.5 rem </td>
+	  <td><span style="font-size:1.5rem"> 測試文字 testtext</span></td>
+  	</tr>
+
+	<tr>
+	  <td align="right">24pt </td>
+	  <td><span style="font-size:1.5rem"> 測試文字 testtext</span></td>
+  	</tr>
+
+	</table>
+
+	<br>
+
+
+    <p style="font-family:'Times New Roman', Times, serif;">font-family: Times New Roman, 細明體</p>
+
+    <table border="1" cellpadding="0" cellspacing="0" width="550" bordercolor="#CCCCCC" style="font-family:'Times New Roman', Times, serif;">
+
+	<tr>
+    	<td width="271" align="right">
+        螢幕預設 1em = 100%
+        </td>
+        <td width="273"><span style="font-size:1em">測試文字 testtext</span></td>
+    </tr>
+
+	<tr>
+	  <td align="right">16px </td>
+	  <td><span style="font-size:16px"> 測試文字 testtext</span></td>
+  	</tr>
+
+	<tr>
+	  <td align="right">12pt </td>
+	  <td><span style="font-size:12pt"> 測試文字 testtext</span></td>
+  	</tr>
+
+	</table>
+
+    <br>
+
+  </div>
+
+    
+
+    
+
+<h3>常用網頁字型大小</h3>
+
+	<div>
+
+    <h1 style="color: #09C;">標題請善用Heading (此為header下的設定，section元素則會再往下小一階)</h1>
+    
+    <h1>Heading 1, 32px, 2em</h1>
+
+    <h2>Heading 2, 24px, 1.5em</h2>
+
+    <h3>Heading 3, 18-19px, 1.17em</h3>
+
+    <h4>Heading 4, 16px, 1em</h4>
+
+    <h5>Heading 5, 13-14px, 0.83em</h5>
+
+    <h6>Heading 6, 10-11px, 0.66em</h6>
+
+
+    <h1 style="color: #09C;">內文</h1>
+
+    <p style="font-size:13px;">13px - 測試文字</p>
+
+    <p style="font-size:14px;">14px - 測試文字</p>
+
+    <p style="font-size:16px;">16px - 測試文字 (預設)</p>
+
+    <p style="font-size:18px;">18px - 測試文字</p>
+
+    <p style="font-size:22px;">22px - 測試文字</p>
+
+    <p style="font-size:20px;">&nbsp;</p>
+
+    
+
+    <h1>標題字型 h1 - h2</h1>
+
+    <h3>次標題 h3</h3>
+
+    <p style="font-size:16px; line-height:24px; width:800px;">16px的大小適合內文。例如：「字型排版學中的空間就像是音樂中的時間。空間可以被切成無限多塊，但在設計上，只要一些合於比例的間隙，卻比一大堆任意而無理的切割還有用許多。」這句話完整詮釋了「垂直的韻律」(Vertical Rhythm)在字型排版上的用處：在音樂中，好的節奏遠比隨意加之的額外裝飾還要來得重要；而在排版中，若每個區塊間的距離符合固定比例，那麼這段文章看起來就會很有韻律感，版面整齊、好看以外，更增加了可閱讀性，讓讀者更願意花長時間閱讀。祕訣就在以「基本行距」為單位決定版面上各區塊的距離。<br><br></p>
+
+    <p style="font-size:13px;">13-14px的大小適合備註與版權宣告。Copyright Copyright1996-2013 National Chiao Tung University ALL RIGHTS RESERVED</p>
+
+    </div>
+
+   <h3>行距</h3>
+
+	<div>
+
+    <p style="font-size:20px;"><strong>理想行距約為字體大小1.5-2倍</strong></p>
+
+    
+
+    <p style="font-size:20px;">行距為字體大小1倍</p>
+
+    <p style="font-size:16px; line-height:1em; width:800px;">16px的大小適合內文。例如：「字型排版學中的空間就像是音樂中的時間。空間可以被切成無限多塊，但在設計上，只要一些合於比例的間隙，卻比一大堆任意而無理的切割還有用許多。」這句話完整詮釋了「垂直的韻律」(Vertical Rhythm)在字型排版上的用處：在音樂中，好的節奏遠比隨意加之的額外裝飾還要來得重要；而在排版中，若每個區塊間的距離符合固定比例，那麼這段文章看起來就會很有韻律感，版面整齊、好看以外，更增加了可閱讀性，讓讀者更願意花長時間閱讀。祕訣就在以「基本行距」為單位決定版面上各區塊的距離。<br><br></p>
+
+    
+
+    <p style="font-size:20px;">行距為字體大小的1.5倍</p>
+
+    <p style="font-size:16px; line-height:1.5em; width:800px;">16px的大小適合內文。例如：「字型排版學中的空間就像是音樂中的時間。空間可以被切成無限多塊，但在設計上，只要一些合於比例的間隙，卻比一大堆任意而無理的切割還有用許多。」這句話完整詮釋了「垂直的韻律」(Vertical Rhythm)在字型排版上的用處：在音樂中，好的節奏遠比隨意加之的額外裝飾還要來得重要；而在排版中，若每個區塊間的距離符合固定比例，那麼這段文章看起來就會很有韻律感，版面整齊、好看以外，更增加了可閱讀性，讓讀者更願意花長時間閱讀。祕訣就在以「基本行距」為單位決定版面上各區塊的距離。<br><br></p>
+
+    
+
+    <p style="font-size:20px;">行距為字體大小2倍</p>
+
+    <p style="font-size:16px; line-height:2em; width:800px;">16px的大小適合內文。例如：「字型排版學中的空間就像是音樂中的時間。空間可以被切成無限多塊，但在設計上，只要一些合於比例的間隙，卻比一大堆任意而無理的切割還有用許多。」這句話完整詮釋了「垂直的韻律」(Vertical Rhythm)在字型排版上的用處：在音樂中，好的節奏遠比隨意加之的額外裝飾還要來得重要；而在排版中，若每個區塊間的距離符合固定比例，那麼這段文章看起來就會很有韻律感，版面整齊、好看以外，更增加了可閱讀性，讓讀者更願意花長時間閱讀。祕訣就在以「基本行距」為單位決定版面上各區塊的距離。<br><br></p>
+
+    
+
+    <p style="font-size:20px; line-height:1.36em; ">line-height is 1em</p>
+
+    <p style="font-size:16px; line-height:1em; width:800px;">
+
+    A typeface has two principle directions: The horizontal, the line, which the eye moves along; and the vertical of the individual characters, defined predominantly by the stems. The stems are responsible for the rhythm of a typeface, while the curves (bowls, instrokes, outstrokes, etc) determine its character. In general, the narrower a typeface becomes, the less distinctive it is. A narrow typeface creates a picket fence or staccato effect, a line dominated by closely spaced stems. This is tiring and dull, and does not make for easy reading. The same occurs when the distances between the stems is too generous.</p>
+
+    
+
+    <p style="font-size:20px; line-height:1.36em; ">line-height is 1.5em</p>
+
+    <p style="font-size:16px; line-height:1.5em; width:800px;">
+
+    A typeface has two principle directions: The horizontal, the line, which the eye moves along; and the vertical of the individual characters, defined predominantly by the stems. The stems are responsible for the rhythm of a typeface, while the curves (bowls, instrokes, outstrokes, etc) determine its character. In general, the narrower a typeface becomes, the less distinctive it is. A narrow typeface creates a picket fence or staccato effect, a line dominated by closely spaced stems. This is tiring and dull, and does not make for easy reading. The same occurs when the distances between the stems is too generous.</p>
+
+    
+
+    <p style="font-size:20px; line-height:1.36em; ">line-height is 2em</p>
+
+    <p style="font-size:16px; line-height:2em; width:800px;">
+
+    A typeface has two principle directions: The horizontal, the line, which the eye moves along; and the vertical of the individual characters, defined predominantly by the stems. The stems are responsible for the rhythm of a typeface, while the curves (bowls, instrokes, outstrokes, etc) determine its character. In general, the narrower a typeface becomes, the less distinctive it is. A narrow typeface creates a picket fence or staccato effect, a line dominated by closely spaced stems. This is tiring and dull, and does not make for easy reading. The same occurs when the distances between the stems is too generous.</p>
+
+    
+
+    </div>
+
+    
+
+    
+
+  
+
+  <h3>字型過小時</h3>
+
+	<div>
+
+    
+
+    <p style="font-size:20px;">字型過小時，可增加字距提升辨識度 ( letter-spacing )</p>
+
+    <p style="font-size:12px; line-height:18px; width:800px; letter-spacing:0.5em;">16px的大小適合內文。例如：「字型排版學中的空間就像是音樂中的時間。空間可以被切成無限多塊，但在設計上，只要一些合於比例的間隙，卻比一大堆任意而無理的切割還有用許多。」這句話完整詮釋了「垂直的韻律」(Vertical Rhythm)在字型排版上的用處：在音樂中，好的節奏遠比隨意加之的額外裝飾還要來得重要；而在排版中，若每個區塊間的距離符合固定比例，那麼這段文章看起來就會很有韻律感，版面整齊、好看以外，更增加了可閱讀性，讓讀者更願意花長時間閱讀。祕訣就在以「基本行距」為單位決定版面上各區塊的距離。<br><br></p>
+
+    
+
+    <p style="font-size:16px; line-height:24px; width:800px;">small font</p>
+
+    <p style="font-size:8px; line-height:17px; width:600px; letter-spacing:0.3em;">
+
+    A typeface has two principle directions: The horizontal, the line, which the eye moves along; and the vertical of the individual characters, defined predominantly by the stems. The stems are responsible for the rhythm of a typeface, while the curves (bowls, instrokes, outstrokes, etc) determine its character. In general, the narrower a typeface becomes, the less distinctive it is. A narrow typeface creates a picket fence or staccato effect, a line dominated by closely spaced stems. This is tiring and dull, and does not make for easy reading. The same occurs when the distances between the stems is too generous.</p>
+
+    
+
+    </div>
+
+  
+
+</div>
+
+</body>
+
+</html>
+

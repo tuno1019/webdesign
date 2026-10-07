@@ -1,0 +1,26 @@
+[
+	{
+		"ctitle":"HW1",
+		"csubtitle":"basic html css",
+        "cref":"download/ex1.pdf",
+        "celm":"download/ex1.zip",
+        "csmp":"https://ex1-peach.vercel.app/",
+        "cimg":"images/ex1.png"
+	},
+	{
+		"ctitle":"HW2",
+		"csubtitle":"basic html css",
+        "cref":"download/ex2.pdf",
+        "celm":"download/ex2.zip",
+        "csmp":"https://ex2-pink-ten.vercel.app/",
+        "cimg":"images/ex2.png"
+	},
+    {
+		"ctitle":"HW3",
+		"csubtitle":"basic html css",
+        "cref":"#",
+        "celm":"#",
+        "csmp":"#",
+        "cimg":"images/ex0.png"
+	}
+]

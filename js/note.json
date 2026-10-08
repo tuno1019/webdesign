@@ -13,5 +13,10 @@
 		"ntitle":"排版示意",
 		"nsubtitle":"Position+Float",
         "nref":"layout/layout.html"
+	},
+	{
+		"ntitle":"z-index",
+		"nsubtitle":"layout tool",
+        "nref":"zindex/zindex.html"
 	}
 ]

@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>元素層級</title>
+<link href="css/zindex.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>	  
+    <nav>
+      <ul>
+        <li><a href="#p1">關於元素層級</a></li>
+        <li><a href="#p2">定位(position)設定</a></li>
+        <li><a href="#p3">定位(position)與z-index混合情境實驗</a></li>
+        <li><a href="#p4">z-index中0與auto設定的差異</a></li>
+        <li><a href="#p5">參考資料</a></li>
+      </ul>
+    </nav>
+</header>
+
+<section>
+<div id="p1" class="bmark"></div>
+<h1>關於元素層級</h1>
+<br>
+<h3>html的堆疊順序</h3>
+<p>html的元素有所謂的前後關係，也就是所謂的堆疊順序(Stacking Order)。沒有設定任何position、float、margin負值，同在一個父層(如在同一個html頁面下)，排列的順序就是先寫的元素會在左上方，然後往下依序排列。如下示意。(可點開css按鈕)</p>
+<br>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_1" src="https://codepen.io/tuno1019/embed/abvdOZw?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/abvdOZw'>z-index_1</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br><br>
+<div id="p2" class="bmark"></div>
+<h3>加入定位(position)設定</h3>
+
+<p>但是若有設定position屬性,就是定位元素。設定為定位元素，且沒有設定z-index為負值，則該元素的順序就會自動高於其他沒有設定定位屬性的元素。如下示意，b2加上了position:absolute後，沒有設定z-index下，層級直接提高，因此下方c3得以往上遞補空間，所以壓在b2的下方(為了看到c3，我修正了c3的尺寸)。另外特別注意的是，因為沒有設定top、left的值，所以排序上b2依舊是在a1下方，換言之，若沒有特別設定，b2的定位只會影響在它之後出現的元素。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_0" src="https://codepen.io/tuno1019/embed/JjYGaPP?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/JjYGaPP'>z-index_0</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+
+<p>將b2定位改為position:relative後，與上方不同的是，元素原先設定的位置並沒有消失，因此c3無法往上遞補空間，但top、left設定有效。</p>
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_8" src="https://codepen.io/tuno1019/embed/ZEbWXpG?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/ZEbWXpG'>z-index_8</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+<p>所以層級的順序，依序如下：<br>
+1. 根元素(如html標籤)<br>
+2. 定位元素，z-index設定為負值(綠塊)<br>
+3. 沒有定位的元素(紅塊)<br>
+4. 定位元素，z-index沒有設定或為auto(黃塊)<br>
+5. 定位元素，z-index設定為正值(藍塊)
+</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_9" src="https://codepen.io/tuno1019/embed/NWGNagm?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/NWGNagm'>z-index_9</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br><br>
+<div id="p3" class="bmark"></div>
+<h3>定位(position)與z-index混合情境實驗</h3>
+
+<p>使用z-index需要搭配定位(position)設定，並設定除static外的其他設定值，包含absolute、fixed、relative、sticky等，才會有效。</p>
+<br>
+<p><mark>情況1</mark>：三區塊皆無定位設定<br>如下示意，雖然紅綠黃三區塊都設定了top，left，z-index，但若沒有設定position，三個區塊的排列沒有任何變化。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_2" src="https://codepen.io/tuno1019/embed/GRpoBEJ?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/GRpoBEJ'>z-index_2</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+<p><mark>情況2</mark>：三區塊皆設定position:relative;<br>如下示意，在紅綠黃三區塊設定position:relative後，top，left，z-index都有作用。但是元素的top對齊點是元素原本的順序下的位置(請看c3的top設定為0px，但還是在下方，而非在頂端，可以對照下一組)。z-index的值越大，層級越上面，從前至後依序為：綠、紅、黃。</p>
+
+<iframe height="328" style="width: 100%;" scrolling="no" title="z-index_3" src="https://codepen.io/tuno1019/embed/dyYGjKb?height=328&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/dyYGjKb'>z-index_3</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+<p><mark>情況3</mark>：三區塊皆設定position:absolute;<br>如下示意，在紅綠黃三區塊設定position:absolute後，top，left，z-index都有作用。z-index的值越大，層級越上面，依此例，層級從前至後依序為：綠、紅、黃。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_4" src="https://codepen.io/tuno1019/embed/LYpGBgw?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/LYpGBgw'>z-index_4</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+<p><mark>情況4</mark>：三區塊皆設定position:relative; 以及紅區塊加設定position:absolute;<br>如下示意，在紅綠黃三區塊設定position:relative後,又為a1設定position:absolute,則可發現，b2的top對齊點不是在a1的下緣，而是瀏覽器的頂端(請對照情況2)，但對z-index的順序來說沒有影響，層級從前至後依序為：綠、紅、黃。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_5" src="https://codepen.io/tuno1019/embed/jObWejM?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/jObWejM'>z-index_5</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+<p><mark>情況5</mark>：三區塊皆混合設定position:relative; 及 float:left;<br>如下示意，在紅綠黃三區塊設定position:relative後,又設定float:left,則可發現三個色塊會先以置左浮動的方式，水平排列，然後再依top、left、z-index的設定依元素順序對齊，也就是b2會是以a1的右側進行left的對齊點，請看c3目前top、left都設定為0px即可了解。對z-index的順序來說沒有影響，層級從前至後依序為：綠、紅、黃。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_6" src="https://codepen.io/tuno1019/embed/jObWQVB?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/jObWQVB'>z-index_6</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+<p><mark>情況6</mark>：三區塊皆混合設定position:absolute; 以及 float:left;<br>如下示意，在紅綠黃三區塊設定position:absolute後,又設定float:left,則可發現三個色塊的float設定無效，三元素直接以top、left、z-index進行定位，層級從前至後依序為：綠、紅、黃。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_7" src="https://codepen.io/tuno1019/embed/abvNLdm?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/abvNLdm'>z-index_7</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br><br>
+<div id="p4" class="bmark"></div>
+<h3>z-index中0與auto設定的差異</h3>
+
+<p>這兩個設定明顯的差異在於當元素有容器時，也就是它還有一個父層級的狀態下，父層級的z-index設定0或是auto對其子層級的z-index就會有影響。如下例，在黃塊中加入一個藍塊，黃塊成為藍塊的父元素。層級從前至後順序為：藍、綠、黃、紅。<br>
+檢視z-index設定可發現，藍塊設定為999，綠塊設定為2，黃塊設定為auto，紅塊沒有設定。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="z-index_10" src="https://codepen.io/tuno1019/embed/jObqGdb?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/jObqGdb'>z-index_10</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+<br><br>
+<p>但當黃塊的z-index設定為0時，層級從前至後順序為：綠、藍、黃、紅。換言之，藍塊跟著父元素黃塊的層級掉到後方，不論設定多大的z-index，都無法超過綠塊。</p>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="XWmdzJe" src="https://codepen.io/tuno1019/embed/XWmdzJe?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+  See the Pen <a href='https://codepen.io/tuno1019/pen/XWmdzJe'>XWmdzJe</a> by tuno1019
+  (<a href='https://codepen.io/tuno1019'>@tuno1019</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+<br><br><br>
+<div id="p5" class="bmark"></div>
+<h3>參考資料</h3>
+<p>
+<a href="https://www.w3cplus.com/css/what-no-one-told-you-about-z-index.html" target="_blank">https://www.w3cplus.com/css/what-no-one-told-you-about-z-index.html</a><br>
+<a href="https://blog.csdn.net/A13330069275/article/details/78430196" target="_blank">https://blog.csdn.net/A13330069275/article/details/78430196</a><br>
+<a href="https://blog.csdn.net/ISaiSai/article/details/52347582" target="_blank">https://blog.csdn.net/ISaiSai/article/details/52347582</a><br>
+
+
+</p>
+
+
+</section>
+
+<footer>
+&copy; Tzu-Ching Hsu All Rights Reserved.
+</footer>
+
+
+</body>
+</html>

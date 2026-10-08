@@ -71,7 +71,7 @@ function getnote(filename) {
 		var htmln = '<article>';
     	htmln +='<h2>'+en['ntitle']+'</h2>';
         htmln +='<h3>'+en['nsubtitle']+'</h3>';
-		 htmln +='<a href="'+en['nref']+'">相關連結</a>';
+		 htmln +='<a href="'+en['nref']+'" target="_blank">相關連結</a>';
     	htmln +='</article>' //最後不用分號
 		
 		$("#note").append(htmln);

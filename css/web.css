@@ -177,7 +177,7 @@ section{
 }
 
 #note article{
-    flex: 0 0 calc((100% - 50px * 5) / 4);
+    flex: 0 0 calc((100% - 50px * 7) / 4);
     text-align: center;
 }
 

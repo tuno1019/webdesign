@@ -12,15 +12,15 @@
 		"csubtitle":"position+float",
         "cref":"download/ex2.pdf",
         "celm":"download/ex2.zip",
-        "csmp":"#",
+        "csmp":"https://ex2-black.vercel.app/",
         "cimg":"images/ex2.png"
 	},
     {
 		"ctitle":"HW3",
-		"csubtitle":"basic html css",
-        "cref":"#",
-        "celm":"#",
+		"csubtitle":"RWD-flex",
+        "cref":"download/ex3.pdf",
+        "celm":"download/ex3.zip",
         "csmp":"#",
-        "cimg":"images/ex0.png"
+        "cimg":"images/ex3.png"
 	}
 ]

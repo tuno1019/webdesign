@@ -21,7 +21,7 @@ function getcourse(filename) {
         html +='<h3>'+en['csubtitle']+'</h3>';
         html +='</div>';
         html +='<div class="note">';
-        html +='<a href="'+en['cref']+'">課程pdf</a>';
+        html +='<a href="'+en['cref']+'" target="_blank">課程pdf</a>';
         html +='<a href="'+en['celm']+'">範例元素</a>';
         html +='<a href="'+en['csmp']+'" target="_blank">完成內容</a>';
         html +='</div>';

@@ -1,5 +1,10 @@
 [
 	{
+		"ntitle":"期中說明",
+		"nsubtitle":"Midterm",
+        "nref":"download/web_mid.pdf"
+	},
+	{
 		"ntitle":"上傳作業(folder)",
 		"nsubtitle":"VSCode+Vercel",
         "nref":"download/upload.pdf"

@@ -5,6 +5,11 @@
         "nref":"#"
 	},
 	{
+		"ntitle":"Flex架構",
+		"nsubtitle":"flexbox",
+        "nref":"download/flex.pdf"
+	},
+	{
 		"ntitle":"上傳作業(folder)",
 		"nsubtitle":"VSCode+Vercel",
         "nref":"download/upload.pdf"

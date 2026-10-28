@@ -17,10 +17,18 @@
 	},
     {
 		"ctitle":"HW3",
-		"csubtitle":"RWD-flex",
+		"csubtitle":"RWD+flex",
         "cref":"download/ex3.pdf",
         "celm":"download/ex3.zip",
         "csmp":"https://ex3-tau.vercel.app/",
         "cimg":"images/ex3.png"
+	},
+    {
+		"ctitle":"Demo",
+		"csubtitle":"RWD+flex",
+        "cref":"download/flex.pdf",
+        "celm":"download/flexbox.zip",
+        "csmp":"#",
+        "cimg":"images/ex0.png"
 	}
 ]

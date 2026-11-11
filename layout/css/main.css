@@ -1,0 +1,385 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+
+body{
+
+	color:#000;
+
+	height:2000px;
+
+	font-family: Verdana, Geneva, sans-serif, 微軟正黑體, Microsoft JhengHei;
+
+	line-height:1.5em;
+
+	font-size:16px;
+
+}
+
+
+
+code{
+
+	font-size:20px;
+
+	display:block;
+
+	clear:both;
+
+}
+
+
+
+h1, h3{
+
+	clear:both;
+
+	font-family: Verdana, Geneva, sans-serif, 微軟正黑體, Microsoft JhengHei;
+
+}
+
+
+
+.box0, .box1, .box2, .box3, .box4{
+
+	padding:10px;
+
+	color:#fff;
+
+}
+
+
+
+.box0{
+
+	width:300px; 
+
+	height:200px; 
+
+	background:#F90;
+
+}
+
+
+
+.box1{
+
+	position:relative;
+
+	width:500px; 
+
+	height:300px; 
+
+	background:#090;
+
+	top:30px;
+
+	left:100px;
+
+}
+
+
+
+.clearfix {
+
+  overflow: auto;
+
+}
+
+
+
+.box1_1{
+
+	position:relative;
+
+	width:300px; 
+
+	height:200px; 
+
+	background:#090;
+
+}
+
+
+
+.box2{
+
+	position: absolute;
+
+	width: 200px;
+
+	height: 200px;
+
+	background: #003;
+
+	right: 0;
+
+	top: 0;
+
+}
+
+
+
+.box3{
+
+	position: fixed;
+
+	width:400px; 
+
+	height:50px; 
+
+	background:#900;
+
+	right:0;
+
+	bottom:0;
+
+}
+
+
+
+.box4{
+
+	position: -webkit-sticky;
+
+  	position: sticky;
+
+  	top: 0;
+
+	width:400px; 
+
+	height:50px; 
+
+	background: #39C;
+
+	z-index:2000;
+
+}
+
+
+
+.vox, .vox0, .vox0_1, .vox1, .vox2{
+
+	float:left;
+
+	padding:10px;
+
+}
+
+
+
+.vox3, .vox4{
+
+	float:right;
+
+	padding:10px;
+
+}
+
+
+
+.vox{
+
+	width:80%;
+
+	background:#FC0;
+
+	padding:10px;
+
+	margin:10px;
+
+}
+
+
+
+.vox0{
+
+	width:40%;
+
+	background:#FC0;
+
+	padding:10px;
+
+	margin:10px;
+
+}
+
+
+
+.vox0_1{
+
+	background:#FC0;
+
+	padding:10px;
+
+	margin:10px;
+
+}
+
+
+
+.vox1{
+
+	width:200px; 
+
+	height:100px; 
+
+	background: #9C0;
+
+	margin:10px;
+
+}
+
+
+
+.vox2{
+
+	width:100px; 
+
+	height:200px; 
+
+	background: #F60;
+
+	margin:10px;
+
+}
+
+
+
+.vox3{
+
+	width:100px; 
+
+	height:200px; 
+
+	background: #6CC;
+
+	margin:10px;
+
+}
+
+
+
+.vox4{
+
+	width:200px; 
+
+	height:100px; 
+
+	background: #F99;
+
+	margin:10px;
+
+}
+
+
+
+.l_img{
+
+	float:left;
+
+	margin:10px;
+
+}
+
+
+
+.r_img{
+
+	float:right;
+
+	margin:10px;
+
+}
+
+
+
+.boxb{
+
+	background:#F90;
+
+	overflow:auto;
+
+	width:1020px;
+
+	margin:auto;
+
+}
+
+
+
+nav{
+
+	float: left;
+
+	width: 200px;
+
+	background: #F60;
+
+}
+
+
+
+nav ul{
+
+	padding:0;
+
+	margin:0;
+
+	width:200px;
+
+	list-style:none;
+
+}
+
+
+
+nav li{
+
+	padding:10px 0px;
+
+	text-align:center;
+
+	color:#FFF;
+
+	border-bottom:solid 1px #fff;
+
+}
+
+
+
+section{
+
+	float:left;
+
+	margin-left: 20px;
+
+	width:800px;
+
+	background:#eee;
+
+	padding:20px;
+
+	font-size:16px;
+
+}
+
+
+
+img{
+
+	float:left;
+
+}
+
+
+
+aside nav{
+
+	margin-left:20px;
+
+	background:#CC0;	
+
+}

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1, h3{
+	color:#F60;
+}
+
+/*header*/
+header{
+	position:fixed;
+	width:100%;
+	top:0;
+	box-sizing:border-box;
+	background:rgba(112,112,112,0.8);
+	z-index:100000;
+}
+
+/* nav bar */
+nav{
+	width:60%;
+	margin:auto;
+	text-align:center;
+}
+
+nav ul{
+	margin: 0; 
+	padding: 0;
+}
+
+nav li{
+	display: inline-block;
+}
+
+nav li a{
+	display:inline-block;
+	padding:20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+nav li a:hover{
+	color: #ccc;
+}
+
+/*section*/
+section{
+	width:70%;
+	margin:auto;
+}
+
+.bmark{
+	height:20px;
+	padding-top:50px;
+}
+
+
+/*footer*/
+
+footer{
+	clear:both;
+	padding:20px 0px;
+	text-align:center;	
+}

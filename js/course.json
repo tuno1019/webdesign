@@ -1,0 +1,42 @@
+[
+	{
+		"ctitle":"HW1",
+		"csubtitle":"basic html css",
+        "cref":"download/ex1.pdf",
+        "celm":"download/ex1.zip",
+        "csmp":"https://ex1-peach.vercel.app/",
+        "cimg":"images/ex1.png"
+	},
+	{
+		"ctitle":"HW2",
+		"csubtitle":"position+float",
+        "cref":"download/ex2.pdf",
+        "celm":"download/ex2.zip",
+        "csmp":"https://ex2-dusky.vercel.app/",
+        "cimg":"images/ex2.png"
+	},
+    {
+		"ctitle":"HW3",
+		"csubtitle":"RWD+flex",
+        "cref":"download/ex3.pdf",
+        "celm":"download/ex3.zip",
+        "csmp":"https://ex3-tau.vercel.app/",
+        "cimg":"images/ex3.png"
+	},
+    {
+		"ctitle":"Demo",
+		"csubtitle":"RWD+flex",
+        "cref":"download/flex.pdf",
+        "celm":"download/flexbox.zip",
+        "csmp":"https://flex-ashy-alpha.vercel.app/",
+        "cimg":"images/ex0.png"
+	},
+    {
+		"ctitle":"HW4",
+		"csubtitle":"jQuery",
+        "cref":"download/ex4.pdf",
+        "celm":"download/ex4.zip",
+        "csmp":"#",
+        "cimg":"images/ex4.png"
+	}
+]

@@ -1,0 +1,32 @@
+[
+	{
+		"ntitle":"期中10/28更新版",
+		"nsubtitle":"Midterm",
+        "nref":"download/web_mid.pdf"
+	},
+	{
+		"ntitle":"Flex架構",
+		"nsubtitle":"flexbox",
+        "nref":"download/flex.pdf"
+	},
+	{
+		"ntitle":"上傳作業(folder)",
+		"nsubtitle":"VSCode+Vercel",
+        "nref":"download/upload.pdf"
+	},
+	{
+		"ntitle":"上傳作業(GitHub)",
+		"nsubtitle":"VSCode+GitHub+Vercel",
+        "nref":"download/upload1.pdf"
+	},
+    {
+		"ntitle":"排版示意",
+		"nsubtitle":"Position+Float",
+        "nref":"layout/layout.html"
+	},
+	{
+		"ntitle":"z-index",
+		"nsubtitle":"layout tool",
+        "nref":"zindex/zindex.html"
+	}
+]

@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700&display=swap&subset=chinese-traditional');
+
+body{
+	font-family: 'Charmonman', 'Noto Sans TC';
+	margin:0;
+	padding:0;
+	background:#e5e5e5;
+	font-weight:700;
+}
+
+/*header*/
+header{
+	position:fixed;
+	width:100%;
+	top:0;
+	box-sizing:border-box;
+	background:rgba(112,112,112,0.8);
+	z-index:100000;
+}
+
+/* nav bar */
+nav{
+	width:60%;
+	margin:auto;
+	text-align:center;
+}
+
+nav ul{
+	margin: 0; 
+	padding: 0;
+}
+
+nav li{
+	display: inline-block;
+}
+
+nav li a{
+	display:inline-block;
+	padding:20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+nav li a:hover{
+	color: #ccc;
+}
+
+/* section */
+section{
+	position:relative;
+	width:80%;
+	height:500px;
+	overflow: hidden;
+	margin:100px auto 0px;
+}
+
+.left, .right{
+	position:absolute;
+	box-sizing:border-box;
+}
+
+.right{
+	width:100%;
+}
+
+.left{
+	width:50%;
+	left:50px;
+	top:150px;
+	background: rgba(253, 116, 104, .8);
+	padding:30px;
+	z-index:20;
+	color:rgba(255, 255, 255, 1);
+}
+
+.left p, .left h1{
+	padding:0;
+	margin:0;
+}
+
+.left h1{
+	font-size:52px;
+	padding-bottom:20px;
+}
+
+/* article */
+article{
+	width:80%;
+	padding:0;
+	margin:auto;
+	margin-top:20px;
+}
+
+.card{
+	float:left;
+	box-sizing:border-box;
+	width:33.33%;
+	min-width:300px;
+	background: rgba(253, 116, 104, 1);
+	text-align:center;
+	border:solid 5px #e5e5e5;
+	padding:5px 0px;
+	color:#fff;   
+	transition: background 1s, color 1s;
+	-webkit-transition: background 1s, color 1s;
+}
+
+.card:hover{
+	cursor:pointer;
+	color:rgba(255,255,255,0.5);
+	background: rgba(144, 8, 150, 1);
+	/* For Safari 3.1 to 6.0 */ 
+}
+
+/* aside */
+
+aside{
+	clear:both;
+	width:80%;
+	margin:auto;
+}
+
+.wraptext{
+	float:left;
+	width:100%;
+	box-sizing:border-box;
+	padding:20px;
+	background:#fff;
+	border:solid 5px #e5e5e5;
+	color: rgba(253, 116, 104, 1);
+}
+
+.wraptext p{
+	padding:0;
+	margin:0;
+	line-height:1.5em;
+}
+
+.wraptext img{
+	float:left;
+	padding-right:20px;
+}
+
+/*footer*/
+
+footer{
+	clear:both;
+	padding:20px 0px;
+	text-align:center;	
+}
+
+/* float item */
+#logo{
+	float:left;
+}
+
+#fb{
+	float:right;
+}

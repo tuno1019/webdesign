@@ -36,7 +36,15 @@
 		"csubtitle":"jQuery+swiper",
         "cref":"download/ex4.pdf",
         "celm":"download/ex4.zip",
-        "csmp":"#",
+        "csmp":"https://ex4fadein.vercel.app/",
         "cimg":"images/ex4.png"
+	},
+    {
+		"ctitle":"HW5",
+		"csubtitle":"AJAX+json",
+        "cref":"download/ex5.pdf",
+        "celm":"download/ex5.zip",
+        "csmp":"#",
+        "cimg":"images/ex5.png"
 	}
 ]
